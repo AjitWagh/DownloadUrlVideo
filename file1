@@ -1,0 +1,85 @@
+<t:RequestSecurityTokenResponse Context="/Default.aspx"
+	xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust">
+	<t:Lifetime>
+		<wsu:Created
+			xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2018-10-19T05:52:45.491Z
+		</wsu:Created>
+		<wsu:Expires
+			xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2018-10-19T06:02:45.491Z
+		</wsu:Expires>
+	</t:Lifetime>
+	<wsp:AppliesTo
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+		<EndpointReference
+			xmlns="http://www.w3.org/2005/08/addressing">
+			<Address>https://dcwater.ravnur.com/</Address>
+		</EndpointReference>
+	</wsp:AppliesTo>
+	<t:RequestedSecurityToken>
+		<Assertion ID="_0aeaf68c-e4fa-4784-b79f-4a07d8844f84" IssueInstant="2018-10-19T05:52:46.120Z" Version="2.0"
+			xmlns="urn:oasis:names:tc:SAML:2.0:assertion">
+			<Issuer>https://ravnurdcw.accesscontrol.windows.net/</Issuer>
+			<ds:Signature
+				xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:SignedInfo>
+					<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+					<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+					<ds:Reference URI="#_0aeaf68c-e4fa-4784-b79f-4a07d8844f84">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+						<ds:DigestValue>PNIqjVeA95cwuFe2dI1KjGf4zJkmw1+uRbY1wcyH1GY=</ds:DigestValue>
+					</ds:Reference>
+				</ds:SignedInfo>
+				<ds:SignatureValue>0Jw0kffx1MEvr6nXZesxVADgbTSBg0K1YO1qmF8q+XMHZvVHch0UH71BACSR6nLNYjAj4CI75UTc2Tj0NV2j8xIGF2BDm+E6z9Yw+zqvQrhipbdtqFsmc2U6GL5r+l9z5BQjXq5b3+p1u3okXN/DEsxFvwp2sqIYNBFulXAgNuSs23250m6AuCxI9FLGolOHq4YFY9jsSDHRyfQ8vKR5qrGs0nKRH9ijFSzXKp9IKGUoOyUXcvje9WADLycZQhJI7kw5/K3Se2W8a7GngDV8zUA6A8ZoghbGcOUTWm4yjRPDzSyStplTQ/9FJcBrneCKMtyKeMcJzBLENXhUKYoN1g==</ds:SignatureValue>
+				<KeyInfo
+					xmlns="http://www.w3.org/2000/09/xmldsig#">
+					<X509Data>
+						<X509Certificate>MIIDQTCCAi2gAwIBAgIQhamUH/j5joRPyq5J+trgtzAJBgUrDgMCHQUAMC4xLDAqBgNVBAMTI3Jhdm51cmRjdy5hY2Nlc3Njb250cm9sLndpbmRvd3MubmV0MB4XDTE2MDEwNjExMjUwM1oXDTIxMDEwMjIyMDAwMFowLjEsMCoGA1UEAxMjcmF2bnVyZGN3LmFjY2Vzc2NvbnRyb2wud2luZG93cy5uZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDozZE/BAdp/7Li589Nski+qNsDk31UKx8GscaKICp9eNQmx+8XSpUntDTGWXldBMC0T+KnEWaJo+t4rsBlSEpIJSJQYc6berEjcMUf+Q4QrpeZjKqwetRHIn54sHQW1rdhPx9247Tsql24xmWlQU89g1GZ+K+uech0hQlR8s8GQkNJXhMrPSEIlAs0pBDBWWpl14W9xtjqj9jCqBi+ILqHFk5ieiWxSOWEh0DJuWj0PFdI7zqUBX0sr+BF+F4dnnEzZSSY97OzdFGPeeZbYciToXYmLQST0Kj6bBhPWFJL/PqytwDMWLc7qvJ/9x9GmsN2McDRxpdpdaPt/UaQ36rjAgMBAAGjYzBhMF8GA1UdAQRYMFaAEGgnIYuD8Z0sgH/npb1/YsKhMDAuMSwwKgYDVQQDEyNyYXZudXJkY3cuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldIIQhamUH/j5joRPyq5J+trgtzAJBgUrDgMCHQUAA4IBAQBNxSVWdyG9Fdp/VCnfuZCcTtN7bQfO9ZrjoWX9jAynitskxF85q8XkbCz+Nh0aRvhdaL6BPR5da4Vl2m/gw362esj5S0mSleSGGnYgjgAlqxim7End/G0XQNkpyg/AV2o60kq3lIuNdj54Ohm4ZQSlxQ7NaNJrAHtP5z4r3TRbAhTx1IHm041OgdBR2LeJJb3Q+zJYIAqH38k/8WYohawGEnnDUTJWkaKiKscM3RG/EP7EdRlFXujfbSR8t7AyyXSwstyKh7mCshVey0uqoW8h9etHIqMPoVRkWQR4viRf3ISBEQNbjgvkJUpO/lDSkIvbCMM7SpaljW/SQIMTHUWQ</X509Certificate>
+					</X509Data>
+				</KeyInfo>
+			</ds:Signature>
+			<Subject>
+				<SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer" />
+			</Subject>
+			<Conditions NotBefore="2018-10-19T05:52:45.491Z" NotOnOrAfter="2018-10-19T06:02:45.491Z">
+				<AudienceRestriction>
+					<Audience>https://dcwater.ravnur.com/</Audience>
+				</AudienceRestriction>
+			</Conditions>
+			<AttributeStatement>
+				<Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">
+					<AttributeValue>Test.Lead@dcwater.com</AttributeValue>
+				</Attribute>
+				<Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+					<AttributeValue>Test</AttributeValue>
+				</Attribute>
+				<Attribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+					<AttributeValue>Lead</AttributeValue>
+				</Attribute>
+				<Attribute Name="http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider">
+					<AttributeValue>http://sts.dcwater.com/adfs/services/trust</AttributeValue>
+				</Attribute>
+			</AttributeStatement>
+		</Assertion>
+	</t:RequestedSecurityToken>
+	<t:RequestedAttachedReference>
+		<SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0"
+			xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"
+			xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_0aeaf68c-e4fa-4784-b79f-4a07d8844f84</KeyIdentifier>
+		</SecurityTokenReference>
+	</t:RequestedAttachedReference>
+	<t:RequestedUnattachedReference>
+		<SecurityTokenReference d3p1:TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0"
+			xmlns:d3p1="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"
+			xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID">_0aeaf68c-e4fa-4784-b79f-4a07d8844f84</KeyIdentifier>
+		</SecurityTokenReference>
+	</t:RequestedUnattachedReference>
+	<t:TokenType>urn:oasis:names:tc:SAML:2.0:assertion</t:TokenType>
+	<t:RequestType>http://schemas.xmlsoap.org/ws/2005/02/trust/Issue</t:RequestType>
+	<t:KeyType>http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey</t:KeyType>
+</t:RequestSecurityTokenResponse>
