@@ -1,0 +1,68 @@
+Hi Ajit,
+ 
+Try the below(email) method to download a video file from the ravnur site:
+You need to save the file to local disk instead of print in the below example code.
+ 
+urls to try:
+https://dcwater.ravnur.com/video/29379/MobileM.mp4
+https://dcwater.ravnur.com/video/29346/MobileM.mp4
+https://dcwater.ravnur.com/original/29346/4dbc004e-8341-4573-adc7-28a2097247e1.MPG
+ 
+userid: testlead
+pwd: Wipro123$              (case sensitive)
+download via program/command is not working.
+ 
+But via browser, the file download is working.
+URL:- https://dcwater.ravnur.com/Login
+Sign in with your network Credentilas  “Active directory”
+User ID: testlead@dcwater.com
+Current Windows (AD) Password is “Wipro123$” case sensitive
+ 
+**********************************************************************************************************
+
+Hi Manish,
+ 
+Have you tried this for the url download?
+ 
+Adding user-Agent in to headers in python urllib2 requests?
+ 
+https://www.pythonforbeginners.com/python-on-the-web/how-to-use-urllib2-in-python/
+With urllib2 you can add your own headers with urllib2.
+
+ 
+
+The reason why you would want to do that is that some websites dislike being
+
+browsed by programs.
+
+ 
+
+If you are creating an application that will access other people’s web resources,
+
+it is  courteous to include real user agent information in your requests,
+
+so they can identify the source of the hits more easily.
+
+ 
+
+When you create the Request object you can add your headers to a dictionary,
+
+and use the add_header() to set the user agent value before opening the request.
+
+# Importing the module
+import urllib2
+ 
+# Define the url
+url = 'http://www.google.com/#q=my_search'
+ 
+# Add your headers
+headers = {'User-Agent' : 'Mozilla 5.10'}
+ 
+# Create the Request. 
+request = urllib2.Request(url, None, headers)
+ 
+# Getting the response
+response = urllib2.urlopen(request)
+ 
+# Print the headers
+print response.headers
