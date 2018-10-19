@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>Working...</title>
+	</head>
+	<body>
+		<form method="POST" name="hiddenform" action="https://ravnurdcw.accesscontrol.windows.net:443/v2/wsfederation">
+			<input type="hidden" name="wa" value="wsignin1.0" />
+			<input type="hidden" name="wresult" value="
+				<t:RequestSecurityTokenResponse
+					xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;>
+					<t:Lifetime>
+						<wsu:Created
+							xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;>2018-10-19T06:09:18.143Z
+						</wsu:Created>
+						<wsu:Expires
+							xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;>2018-10-19T07:09:18.143Z
+						</wsu:Expires>
+					</t:Lifetime>
+					<wsp:AppliesTo
+						xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;>
+						<wsa:EndpointReference
+							xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;>
+							<wsa:Address>https://ravnurdcw.accesscontrol.windows.net/</wsa:Address>
+						</wsa:EndpointReference>
+					</wsp:AppliesTo>
+					<t:RequestedSecurityToken>
+						<saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_771338c0-5f46-4925-9618-a2920a6841ae&quot; Issuer=&quot;http://sts.dcwater.com/adfs/services/trust&quot; IssueInstant=&quot;2018-10-19T06:09:18.159Z&quot;
+							xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;>
+							<saml:Conditions NotBefore=&quot;2018-10-19T06:09:18.143Z&quot; NotOnOrAfter=&quot;2018-10-19T07:09:18.143Z&quot;>
+								<saml:AudienceRestrictionCondition>
+									<saml:Audience>https://ravnurdcw.accesscontrol.windows.net/</saml:Audience>
+								</saml:AudienceRestrictionCondition>
+							</saml:Conditions>
+							<saml:AttributeStatement>
+								<saml:Subject>
+									<saml:SubjectConfirmation>
+										<saml:ConfirmationMethod>urn:oasis:names:tc:SAML:1.0:cm:bearer</saml:ConfirmationMethod>
+									</saml:SubjectConfirmation>
+								</saml:Subject>
+								<saml:Attribute AttributeName=&quot;emailaddress&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot;>
+									<saml:AttributeValue>Test.Lead@dcwater.com</saml:AttributeValue>
+								</saml:Attribute>
+								<saml:Attribute AttributeName=&quot;givenname&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot;>
+									<saml:AttributeValue>Test</saml:AttributeValue>
+								</saml:Attribute>
+								<saml:Attribute AttributeName=&quot;surname&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot;>
+									<saml:AttributeValue>Lead</saml:AttributeValue>
+								</saml:Attribute>
+							</saml:AttributeStatement>
+							<saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2018-10-19T06:09:17.659Z&quot;>
+								<saml:Subject>
+									<saml:SubjectConfirmation>
+										<saml:ConfirmationMethod>urn:oasis:names:tc:SAML:1.0:cm:bearer</saml:ConfirmationMethod>
+									</saml:SubjectConfirmation>
+								</saml:Subject>
+							</saml:AuthenticationStatement>
+							<ds:Signature
+								xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;>
+								<ds:SignedInfo>
+									<ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; />
+									<ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; />
+									<ds:Reference URI=&quot;#_771338c0-5f46-4925-9618-a2920a6841ae&quot;>
+										<ds:Transforms>
+											<ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; />
+											<ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; />
+										</ds:Transforms>
+										<ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; />
+										<ds:DigestValue>00eQ8imSDArNrQwoIif3nib3vhrCs39lSeGwSfCk8CY=</ds:DigestValue>
+									</ds:Reference>
+								</ds:SignedInfo>
+								<ds:SignatureValue>matsE7MsQKLtEzrv+zac+kkq7SatUmhU3atk+TJpWzazZqDDoZFt4HLzSYO9+g3Cl8up0+C25IVOs3tmQGlEQoz18kEIMoJhW6WOOq9YqU84AjYa/sWn/DoAUFDYM9JD/sFz/noihHG8ei37T0zTeK1gNWmEFejLtjEMUJWkGLUqqLOuCrJnTHfskNFR5wFcMsNNaDGfnFhoaLzciFazj/tLyIm9O77vC8O1AXlilkxMoOVwBQjF6GY2ckWNKrjykZUbvpx0pTcb2i/3+byyUhwZsQsAi5cJBQF6EhUapJqhGP4ckY/vnpg/8K53/DjWWakYM7wXjuzSkgmwmvp1og==</ds:SignatureValue>
+								<KeyInfo
+									xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;>
+									<X509Data>
+										<X509Certificate>MIIC2jCCAcKgAwIBAgIQQpWiMpAYdrtB13hULemoXzANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBzdHMuZGN3YXRlci5jb20wHhcNMTYwMTA1MDIxOTM1WhcNMjEwMTAzMDIxOTM1WjApMScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBzdHMuZGN3YXRlci5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDMsOu0Ir9jvFk+4QWZ+vhMVR2xvblCgU2amPw3SIH/nV+9SKyv9vuuFyKnGZj1+G2oWDDNKU7YIHLxpZTELlcmEwmv9qG5g6jkum6eIw7+2IPZqmqYRuZFiPOM4qNiQ2ewkjTLJ0hX4d8qXAX9t7ZeZDPnbPTMWATQ7JxH9FluazG44YLpFsuqqCCBQWZfTfeDQpQzmL/ntrsHFOYiJAT9cVy/AXIwkwdO+yln2R68cLC6HuXVR1ErHnsfEqKdSaMSCr49b3TGC6WwQwnawWJL832umNZmU0noWN31cFJzAGFTDKnUjFZExwERWBVcKH8jYvnSG3fvOilfEAQKVZaBAgMBAAEwDQYJKoZIhvcNAQELBQADggEBACNjC3iv27MA5FmIQ+In9+5PAgCNTaiPAOtBQhncuNWctXzMNefURGzlvADFhC3RKI9QENurPgTv+U+BWkbxR8FOckU7ThowZ6M4CBW0/D5X/JKa790/1iX7MSWyc0BELJTy6mwUu4wMqEAS984O6N6o6L6o1njMtsnr1p7j+CCIqMm2SmdCsOZ9s1RuoiWEPevkQQNE5We2UybpfLl72Th1CLBYCVm2mK9LTEqESbm8fChF+O8iddtdaSJoQfedYs3lT4e4yvEfku49NB7ZAuudb3Od5X6jmWsYisU9wdLRdBdWLotBJmPmuVgkXAcl+YclG5+ZZjJF2sZIkTMnvtM=</X509Certificate>
+									</X509Data>
+								</KeyInfo>
+							</ds:Signature>
+						</saml:Assertion>
+					</t:RequestedSecurityToken>
+					<t:TokenType>urn:oasis:names:tc:SAML:1.0:assertion</t:TokenType>
+					<t:RequestType>http://schemas.xmlsoap.org/ws/2005/02/trust/Issue</t:RequestType>
+					<t:KeyType>http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey</t:KeyType>
+				</t:RequestSecurityTokenResponse>" />
+				<input type="hidden" name="wctx" value="cHI9d3NmZWRlcmF0aW9uJnJtPWh0dHBzJTNhJTJmJTJmZGN3YXRlci5yYXZudXIuY29tJTJmJmN4PSUyZkRlZmF1bHQuYXNweA2" />
+				<noscript>
+					<p>Script is disabled. Click Submit to continue.</p>
+					<input type="submit" value="Submit" />
+				</noscript>
+			</form>
+			<script language="javascript">window.setTimeout(\'document.forms[0].submit()\', 0);</script>
+		</body>
+	</html>
